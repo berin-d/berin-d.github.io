@@ -10,7 +10,7 @@ export default defineConfig({
             sidebar: [
                 {
                     label: 'Accueil',
-                    link: '/index',
+                    link: '/',
                 },
                 {
                     label: 'Deuxième page',
