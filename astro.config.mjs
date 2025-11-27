@@ -1,39 +1,25 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import tailwindcss from "@tailwindcss/vite";
 
+// https://astro.build/config
 export default defineConfig({
-    site: 'https://berin-d.github.io',
-    base: '/app',
-    integrations: [
-        starlight({
-            title: 'App',
-            customCss: [
-                './src/styles/global.css',
-            ],
-            sidebar: [
-                {
-                    label: 'App',
-                    collapsed: false,
-                    items: [
-                        { label: 'Accueil', link: '/' },
-                        { label: 'Pages', link: '/pages/about' },
-                    ],
-                },
-                {
-                    label: 'AfterWiki',
-                    collapsed: false,
-                    items: [
-                        { label: 'Accueil', link: '/afterwiki/' },
-                        { label: 'Intro', link: '/afterwiki/intro' },
-                        { label: 'NetCode', link: '/afterwiki/netcode' },
-                        { label: 'Guide', link: '/afterwiki/guide' },
-                    ],
-                },
-            ],
-        }),
-    ],
-    vite: {
-        plugins: [tailwindcss()],
-    },
+	site: 'https://berin-d.github.io/',
+	base: '/',
+	integrations: [
+		starlight({
+			title: 'AfterWiki',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			sidebar: [
+				{
+					label: 'Introduction',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Example Intro', slug: 'introduction/intro' },
+					],
+				},
+
+			],
+		}),
+	],
 });
