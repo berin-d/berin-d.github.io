@@ -8,6 +8,9 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'App',
+            customCss: [
+                './src/styles/global.css',
+            ],
             sidebar: [
                 {
                     label: 'App',
