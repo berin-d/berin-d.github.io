@@ -24,6 +24,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Netcode', slug: 'netcode/introduction' },
+						{ label: 'Camera', slug: 'netcode/camera' },
 					],
 
 				}
