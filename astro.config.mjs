@@ -9,16 +9,24 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'AfterWiki',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Hercule-26/Game/tree/develop' }],
 			sidebar: [
+
 				{
 					label: 'Introduction',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Intro', slug: 'introduction/intro' },
+						{ label: 'Architecture', slug: 'introduction/architecture' },
 					],
-				},
 
+				},
+				{
+					label: 'Netcode',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Netcode', slug: 'netcode/introduction' },
+					],
+
+				}
 			],
 		}),
 	],
