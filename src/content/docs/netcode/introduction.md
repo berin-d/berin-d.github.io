@@ -1,0 +1,53 @@
+---
+title: Netcode
+description: A guide in my new Starlight docs site.
+---
+
+COMING SOON
+--------
+
+## Network Object
+
+> **Définition**
+> Un NetworkObject est un composant spécial que tu ajoutes à un GameObject pour le rendre visible et synchronisable sur le réseau (entre le serveur et les clients).
+
+### 🔻 1. Network Object - Hiérarchie
+-----------
+```
+(GameObject)
+├── NetworkObject 
+```
+
+### 🔻 2. Network Object - Avec
+-----------
+- ID réseau unique
+> Chaque NetworkObject reçoit un identifiant pour être reconnu sur toutes les machines.
+-  Spawn / Despawn
+> Le serveur peut créer (spawn) ou supprimer (despawn) l’objet, et tous les clients le verront apparaître/disparaître
+- Synchronisation
+> Il garde les données de base synchronisées (position).
+- Ownership
+> Il détermine qui contrôle l’objet (le client, le serveur, ou un autre joueur).
+
+### 🔻 3. Network Object - Sens
+-----------
+- Le joueur ne sera pas "reconnu" par le système réseau.
+- Le serveur ne saura même pas qu’il existe
+- Les autres clients ne verront pas ton joueur
+- Aucune donnée (position, animation, tir, etc.) ne sera transmise sur le réseau
+
+
+
+## Network Transform
+
+> **Définition**
+> Le composant NetworkTransform synchronise les mouvements (ou rotations) des objets du jeu sur le réseau.
+
+### 🔻 1. Network Transform - Hiérarchie
+----
+
+```
+(GameObject)
+├── NetworkObject
+├── NetworkTransform (pour synchroniser la position & rotation)
+```
