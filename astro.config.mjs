@@ -28,9 +28,6 @@ export default defineConfig({
                     ],
                 },
             ],
-            customCss: [
-                './public/style.css',
-            ],
         }),
     ],
     vite: {
