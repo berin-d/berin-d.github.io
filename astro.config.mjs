@@ -26,7 +26,15 @@ export default defineConfig({
 						{ label: 'Introduction', slug: 'netcode/introduction' },
 						{ label: 'Network Objects', slug: 'netcode/networkobject' },
 						{ label: 'Network Transform', slug: 'netcode/networktransform' },
-						{ label: 'Camera', slug: 'netcode/camera' },
+					],
+
+				},
+				{
+					label: 'Player',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Movement', slug: 'player/movement' },
+						{ label: 'Camera', slug: 'player/camera' },
 					],
 
 				}

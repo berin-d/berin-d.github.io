@@ -3,17 +3,6 @@ title: NetCode Unity - Essentiel
 description: A guide in my new Starlight docs site.
 author: 'Berin'
 ---
-
-## Table des matières
-
-#### Base
-1. [Introduction](#introduction)
-
-#### Annexes
-2. [Ressources](#ressources)
-
----
-
 ## Introduction
 
 > **Concepte :**
