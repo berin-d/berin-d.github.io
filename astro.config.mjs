@@ -23,7 +23,9 @@ export default defineConfig({
 					label: 'Netcode',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Netcode', slug: 'netcode/introduction' },
+						{ label: 'Introduction', slug: 'netcode/introduction' },
+						{ label: 'Network Objects', slug: 'netcode/networkobject' },
+						{ label: 'Network Transform', slug: 'netcode/networktransform' },
 						{ label: 'Camera', slug: 'netcode/camera' },
 					],
 
