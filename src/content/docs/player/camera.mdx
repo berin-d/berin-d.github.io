@@ -1,0 +1,48 @@
+---
+title: Player - Camera
+description: A guide in my new Starlight docs site.
+author: 'AfterLife Studio'
+---
+import { Code, Aside } from '@astrojs/starlight/components';
+
+
+
+
+
+<Aside type="caution">Sur unity la dernière caméra crée devient la caméra principal.</Aside>
+
+## Implémentation
+
+- Un **GameObject camera** doit-être placer dans le prefab du joueur.
+- Cette caméra dois-être `disable` par défaut.
+
+
+#### Implémentation - code
+Au niveau du script **PlayerMovement.cs** 
+
+
+<Code code="[SerializeField] private Camera _camera;" lang="csharp" title="PlayerMovement.cs" mark={['file', 'CMS']} />
+
+Ajouter la fonction `OnNetworkSpawn()`
+
+<Code code="
+  public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+        if (!IsOwner) return;
+        _camera.enabled = true;
+    }
+" lang="csharp" title="PlayerMovement.cs" mark={['file', 'CMS']} />
+
+1. Quand notre GameObject spawn (cad le joueur)
+2. Est-ce qu'il est bien le propriétaire de cette instance ?
+3. Si oui : Sa caméra est activer.
+4. Si non : La caméra reste désactiver.
+
+Ainsi, on passera ce processus ainsi.
+
+
+
+
+
+

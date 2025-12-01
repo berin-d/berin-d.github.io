@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import catppuccin from "@catppuccin/starlight";
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,6 +40,12 @@ export default defineConfig({
 
 				}
 			],
+			plugins: [
+				catppuccin({
+					dark: { flavor: "macchiato", accent: "sky" },
+					light: { flavor: "latte", accent: "sky" }
+				})
+			]
 		}),
 	],
 });
