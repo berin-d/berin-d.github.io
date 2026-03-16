@@ -30,7 +30,7 @@ export default function RootLayout({
         {children}
       </body>
       <footer className="text-center text-sm text-gray-500 py-4">
-        <p> My Portfolio. All rights reserved.</p>
+        <p>@2026 My Portfolio. All rights reserved.</p>
       </footer>
     </html>
   );
