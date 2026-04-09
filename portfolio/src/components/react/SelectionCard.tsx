@@ -29,49 +29,66 @@ export default function SelectionCard() {
             </nav>
 
             <div className="w-full mx-auto overflow-hidden">
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-                >
-                    {/* Experiences */}
-                    <div className="w-full flex-shrink-0">
-                        <div id="experiences" className="space-y-4">
-                            <Card
-                                title="Finrack"
-                                description="Contributed to enhancing an existing ERP by developing new interfaces, improving its architecture, implementing new features, and refining the UX/UI."
-                                icon="/finrack_logo.jpg"
-                                image="/finrack.png"
-                                tags={["Vue", "TypeScript", "Tailwind", "Figma", "Spring boot"]}
-                                github="https://github.com/berin-d/cible-app.git"
-                            />
+                <div className="flex gap-4">
 
-                            <Card
-                                title="Solution2Risk"
-                                description="Built and deployed a showcase website (Vue + Laravel) on a Hostinger VPS, then led its full migration to WordPress."
-                                tags={["Laravel","Hostinger","Vps", "Wordpress"]}
-                                
-                            />
-                        </div>
+                    {/* Texte vertical gauche */}
+                    <div className="flex items-center justify-center shrink-0">
+                        <span
+                            className="text-[120px] font-bold text-gray-200 select-none leading-none"
+                            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                        >
+                            {SECTIONS[activeIndex].toUpperCase()}
+                        </span>
                     </div>
 
-                    {/* Projects */}
-                    <div className="w-full flex-shrink-0">
-                        <div id="projects" className="space-y-4">
-                            <Card
-                                title="Cible"
-                                description="A modern, dark graphical interface built with Tauri and React."
-                                icon="/app-icon.png"
-                                image="/app-icon.png"
-                                tags={["React", "TypeScript", "Tauri", "Rust", "Spring boot"]}
-                                github="https://github.com/berin-d/cible-app.git"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Credentials */}
-                    <div className="w-full flex-shrink-0">
-                        <div id="credentials" className="space-y-4">
-                         
+                    {/* Contenu sliding */}
+                    <div className="flex-1 overflow-hidden">
+                        <div
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                        >
+                            {/* Experiences */}
+                            <div className="w-full flex-shrink-0">
+                                <div id="experiences" className="space-y-4">
+                                    <Card
+                                        title="Finrack"
+                                        description="Contributed to enhancing an existing ERP by developing new interfaces, improving its architecture, implementing new features, and refining the UX/UI."
+                                        icon="/finrack_logo.jpg"
+                                        image="/finrack.png"
+                                        tags={["Vue", "TypeScript", "Tailwind", "Figma", "Spring boot"]}
+                                        github="https://github.com/berin-d/cible-app.git"
+                                    />
+
+                                    <Card
+                                        title="Solution2Risk"
+                                        description="Built and deployed a showcase website (Vue + Laravel) on a Hostinger VPS, then led its full migration to WordPress."
+                                        tags={["Laravel", "Hostinger", "Vps", "Wordpress"]}
+
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Projects */}
+                            <div className="w-full flex-shrink-0">
+                                <div id="projects" className="space-y-4">
+                                    <Card
+                                        title="Cible"
+                                        description="A modern, dark graphical interface built with Tauri and React."
+                                        icon="/app-icon.png"
+                                        image="/app-icon.png"
+                                        tags={["React", "TypeScript", "Tauri", "Rust", "Spring boot"]}
+                                        github="https://github.com/berin-d/cible-app.git"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Credentials */}
+                            <div className="w-full flex-shrink-0">
+                                <div id="credentials" className="space-y-4">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
