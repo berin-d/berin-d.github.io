@@ -28,11 +28,11 @@ export default function SelectionCard() {
                 </ul>
             </nav>
 
-            <div className="w-full mx-auto overflow-hidden">
+            <div className="w-full h-screen mx-auto overflow-hidden">
                 <div className="flex gap-4">
 
                     {/* Texte vertical gauche */}
-                    <div className="flex items-center justify-center shrink-0">
+                    <div className="absolute hidden sm:flex items-center justify-center shrink-0   h-screen">
                         <span
                             className="text-[120px] font-bold text-gray-200 select-none leading-none"
                             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
@@ -80,7 +80,17 @@ export default function SelectionCard() {
                                         tags={["React", "TypeScript", "Tauri", "Rust", "Spring boot"]}
                                         github="https://github.com/berin-d/cible-app.git"
                                     />
+
+                                    <Card
+                                        title="ACW-TECH Managers"
+                                        description="Invoice, customer, and service history management application."
+                                        image="/acw-tech1.png"
+                                        tags={["Nuxt", "Supabase"]}
+
+                                    />
                                 </div>
+
+
                             </div>
 
                             {/* Credentials */}

@@ -38,10 +38,9 @@ export default function Main() {
                     </svg>
                 </motion.button>
             </motion.header>
-
             <motion.main
                 ref={mainRef}
-                className="w-full min-h-screen mx-auto px-6 pb-16 flex-1 flex flex-col justify-center pt-20"
+                className="w-full min-h-screen mx-auto px-6 pb-16 justify-center pt-20"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
