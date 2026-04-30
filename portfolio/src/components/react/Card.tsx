@@ -15,7 +15,7 @@ export default function Card({ title, description, icon, image, tags, github }: 
     <div className="relative w-full max-w-4xl mx-auto bg-white backdrop-blur-sm border border-gray-200/80 rounded-2xl p-8 sm:p-10 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
 
 
-      <div className="absolute top-0 right-0 bottom-0 w-2/5 pointer-events-none z-0 overflow-hidden">
+      <div className="hidden sm:block absolute top-0 right-0 bottom-0 w-2/5 pointer-events-none z-0 overflow-hidden">
         <img
           src={image}
           alt=""

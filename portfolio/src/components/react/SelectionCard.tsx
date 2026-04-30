@@ -28,7 +28,7 @@ export default function SelectionCard() {
                 </ul>
             </nav>
 
-            <div className="w-full h-screen mx-auto overflow-hidden">
+            <div className="w-full min-h-screen mx-auto overflow-hidden">
                 <div className="flex gap-4">
 
                     {/* Texte vertical gauche */}
