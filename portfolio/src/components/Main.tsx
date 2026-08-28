@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import Profil from "./react/Profil";
-import SelectionCard from "./react/SelectionCard";
+import Profil from "../views/Profil";
+import SelectionCard from "../views/SelectionCard";
 import { motion } from "framer-motion";
 
 const sectionVariants = {
@@ -24,19 +24,6 @@ export default function Main() {
                 variants={sectionVariants}
             >
                 <Profil />
-
-                {/* Bouton scroll vers main */}
-                <motion.button
-                    onClick={() => mainRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    className="flex flex-col items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors hover:cursor-pointer"
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-                >
-                    <span className="text-sm tracking-widest uppercase">See works</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M12 5v14M5 12l7 7 7-7" />
-                    </svg>
-                </motion.button>
             </motion.header>
             <motion.main
                 ref={mainRef}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "./Card.tsx";
+import Card from "../components/Card.tsx";
 
 const SECTIONS = ["experiences", "projects"] as const;
 
@@ -30,19 +30,6 @@ export default function SelectionCard() {
 
             <div className="w-full min-h-screen mx-auto overflow-hidden">
                 <div className="flex gap-4">
-
-                    {/* Texte vertical gauche */}
-                    <div className="absolute hidden sm:flex items-center justify-center shrink-0   h-screen">
-                        <span
-                            className="text-[120px] font-bold text-gray-200 select-none leading-none"
-                            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-                        >
-                            {SECTIONS[activeIndex].toUpperCase()}
-                        </span>
-                    </div>
-
-
-                    {/* Contenu sliding */}
                     <div className="flex-1 overflow-hidden">
                         <div
                             className="flex transition-transform duration-500 ease-in-out"
@@ -85,8 +72,7 @@ export default function SelectionCard() {
                                         title="ACW-TECH Managers"
                                         description="Invoice, customer, and service history management application."
                                         image="/acw-tech1.png"
-                                        tags={["Nuxt", "Supabase"]}
-
+                                        tags={["Nuxt", "Supabase"]} icon={""}
                                     />
                                 </div>
 
