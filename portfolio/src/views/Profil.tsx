@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import DecryptedText from "../components/DecryptedText";
 
 export default function Profil() {
 
@@ -38,8 +39,15 @@ export default function Profil() {
 
                     {/* La description est plus lisible (text-base sur mobile, text-lg sur PC) */}
                     <p className="text-slate-600 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-[90%] sm:max-w-xl">
-                        Software developer focused on building robust, scalable, and
-                        beautifully designed applications from analysis to deployment.
+                        Software developer focused on building <DecryptedText
+                            text="Customize me"
+                            speed={20}
+                            maxIterations={10}
+                            characters="ABCD1234!?"
+                            className="revealed"
+                            parentClassName="all-letters"
+                            encryptedClassName="encrypted"
+                        />
                     </p>
                 </div>
 
